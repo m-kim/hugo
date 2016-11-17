@@ -1,11 +1,11 @@
-baseurl = "m-kim.github.io"
+baseurl = "https://m-kim.github.io/"
 languageCode = "en-us"
 title = ""
 paginate = 5
 #DisqusShortname = "YOUR_SHORT_NAME_HERE"
 Copyright = "All rights reserved - 2016"
 canonifyurls = true
-
+relativeURLS=true
 [params]
   description = ""
   cover = "images/smokey-mountains.preview.jpg"
