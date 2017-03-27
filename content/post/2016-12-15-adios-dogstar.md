@@ -11,12 +11,12 @@ menu = "main"
 Compile options for ADIOS:
 
 ```
-CC=mpicc LIBS="-lpthread" CFLAGS="-fPIC" LDFLAGS="-fPIC" ./configure --prefix=/home/mark/local/adios
+CC=mpicc LIBS="-lpthread" CFLAGS="-fPIC" LDFLAGS="-fPIC" ./configure --prefix=$HOME/local/adios
 
 ```
 
 For DS:
 
 ```
- CC=mpicc CFLAGS="-fPIC $(/home/mark/local/adios/bin/adios_config -c )" LDFLAGS="$(/home/mark/local/adios/bin/adios_config -l) -fPIC" ./configure --prefix=/home/mark/local/ --with-adios_dir=/home/mark/local/adios/
+ CC=mpicc CFLAGS="-fPIC $($HOME/local/adios/bin/adios_config -c )" LDFLAGS="$($HOME/local/adios/bin/adios_config -l) -fPIC" ./configure --prefix=$HOME/local/ --with-adios_dir=$HOME/local/adios/
 ```
