@@ -18,5 +18,5 @@ CC=mpicc LIBS="-lpthread" CFLAGS="-fPIC" LDFLAGS="-fPIC" ./configure --prefix=$H
 For DS:
 
 ```
- CC=mpicc CFLAGS="-fPIC $($HOME/local/adios/bin/adios_config -c )" LDFLAGS="$($HOME/local/adios/bin/adios_config -l) -fPIC" ./configure --prefix=$HOME/local/ --with-adios_dir=$HOME/local/adios/
+ CC=mpicc CFLAGS="-fPIC $($HOME/local/adios/bin/adios_config -c )" LDFLAGS="$($HOME/local/adios/bin/adios_config -l) -fPIC" ./configure --prefix=$HOME/local/dogstar --with-adios_dir=$HOME/local/adios/
 ```
