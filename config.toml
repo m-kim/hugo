@@ -6,6 +6,7 @@ paginate = 5
 Copyright = "All rights reserved - 2016"
 canonifyurls = true
 relativeURLS=true
+theme="casper"
 [params]
   description = ""
   cover = "images/smokey-mountains.preview.jpg"
