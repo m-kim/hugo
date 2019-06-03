@@ -1,13 +1,15 @@
 +++
 date = "2019-05-28T21:00:09-04:00"
 draft = false
-title = "Building my VTK-m Path tracer using conda"
+title = "Building my VTK-m Path tracer using conda (updated 2019-06-02"
 tags = ["vtkm","vtk-m", "path tracer", "path tracing", "conda"]
 
 comments = false
 share = false
 menu = "main"
 +++
+
+Update: With Ubuntu 16.04, the g++ from quantstack needs to be installed.
 
 A quick tutorial to install my path tracer using conda.
 
@@ -36,6 +38,7 @@ Now that an environment is setup, we'll need to install VTK-m, particularly the 
 ##### Install VTK-m through conda
 ```console
 conda install vtk-m-cuda -c m-kim
+conda install gcc-7 -c quantstack -c conda-forge
 ```
 
 `vtk-m-cuda` is the package name: it is downloaded from anaconda.org and installed in the current environment. The `-c` is the channel, which in conda parlance is the user/group who uploaded it to anaconda.org. In this case, the channel is my personal channel under the user `m-kim.` 
@@ -59,7 +62,7 @@ Great, now we're on the correct branch of the source code. Let's compile it. To 
 ```
 mkdir build
 cd build
-CUDACXX=/usr/local/cuda/bin/nvcc cmake ../../ 
+CUDACXX=/usr/local/cuda/bin/nvcc cmake ../
 make
 ```
 
@@ -78,6 +81,7 @@ CMake will generate a makefile to build the CornellBox executable. When it finis
 conda create -n pathtracer
 conda activate pathtracer
 conda install vtk-m-cuda -c m-kim
+conda install gcc-7 -c quantstack -c conda-forge
 git clone git@github.com:m-kim/raytracingtherestofyourlife.git
 cd raytracingtherestofyourlife
 git checkout vtkm-working
